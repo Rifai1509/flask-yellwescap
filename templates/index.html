@@ -1,0 +1,21 @@
+{% extends "main_layout.html" %}
+{% block content %}
+<center>
+    <h1>Silakan Log In dulu Bos</h1><br/>
+</center>
+<div>
+    <form action="" method="POST">
+        <div class="form-group">
+          <label for="email">Isi Emailmu Boss!!!</label>
+          <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Isi Email disini yaa">
+        </div>
+        <div class="form-group">
+          <label for="Password">Passwordnya juga yaa</label>
+          <input type="password" name="password" class="form-control" id="Password" placeholder="Isi password, jangan salah">
+        </div>
+        <button type="submit" class="btn btn-primary">Gaskan oiii</button>
+        <a class="btn btn-dark" href="/lupa">Bantuan</a>
+
+      </form>
+</div>
+{% endblock %}

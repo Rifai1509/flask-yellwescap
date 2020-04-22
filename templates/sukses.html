@@ -1,0 +1,19 @@
+{% extends "main_layout.html" %}
+{% block content %}
+<center>
+    <h1>Mulai Menggunakan Wescap</h1><br/>
+</center>
+<div>
+    <form action="" method="POST">
+        <div class="form-group">
+            <label for="cari"><strong>Term :</strong></label>
+          <input type="text" name="term" class="form-control" id="cari" placeholder="Masukkan nama term">
+        </div>
+        <div class="form-group">
+            <label><strong>Lokasi :</strong></label>
+          <input type="text" name="lokasi" class="form-control" placeholder="Masukkan lokasi">
+        </div>
+        <button type="submit" class="btn btn-primary">Mulai scraping</button>
+      </form>
+</div>
+{% endblock %}

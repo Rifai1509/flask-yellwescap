@@ -1,0 +1,38 @@
+{% extends "main_layout.html" %}
+{% block content %}
+
+<h1 align="center" style="text-transform:uppercase"> Hasil untuk {{term}} di {{lokasi}}</h1>
+<br/><br/> {{ download | safe }}
+<a class="btn btn-primary" href="/">Kembai </a>
+<br/>
+
+<div class="container">
+        <div class="row">
+            <div class="col-lg-12 table-responsive">
+                <table id="hasil-table" class="table responsive table-hover">
+                    <thead>
+                      <tr>
+                          <th>Name</th>
+                          <th>Address</th>
+                          <th>Post Code</th>
+                          <th>Phone Number</th>
+                          <th>Website</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                    {% for data in datas %}
+                      <tr>
+                        <td>{{data['name']}}</td>
+                        <td>{{data['address']}}</td>
+                        <td>{{data['post']}}</td>
+                        <td>{{data['telp']}}</td>
+                        <td>{{data['web']}}</td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+</div>
+{% endblock %}
