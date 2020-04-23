@@ -26,7 +26,8 @@
                         <td>{{data['address']}}</td>
                         <td>{{data['post']}}</td>
                         <td>{{data['telp']}}</td>
-                        <td>{{data['web']}}</td>
+                         <td><a href="{{data['web']['href']|safe}}">{{data['web']|safe}} </a></td>
+
                       </tr>
                     {% endfor %}
                     </tbody>
