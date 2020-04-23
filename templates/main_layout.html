@@ -5,52 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
-    <title>Aplikasiku</title>
+    <title>Wescap</title>
     <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
-    <style>
-  body {
-    font: 20px Montserrat, sans-serif;
-    line-height: 1.8;
 
-  }
-  p {font-size: 16px;}
-  .margin {margin-bottom: 45px;}
-  .bg-1 {
-    background-color: #1abc9c; /* Green */
-    color: #ffffff;
-  }
-  .bg-2 {
-    background-color: #474e5d; /* Dark Blue */
-    color: #ffffff;
-  }
-  .bg-3 {
-    background-color: #ffffff; /* White */
-    color: #555555;
-  }
-  .bg-4 {
-    background-color: #2f2f2f; /* Black Gray */
-    color: #fff;
-  }
-  .container-fluid {
-    padding-top: 100px;
-    padding-bottom: 100px;
-  }
-  .navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-  }
-  .navbar-nav  li a:hover {
-    color: #1abc9c !important;
-  }
-  </style>
 </head>
 
 <body>
@@ -59,17 +19,25 @@
 
             <div class="container">
                 <a class="navbar-brand mr-4" href="/">
-                    <font color="white"><strong>Web Scraper</strong></font>
+                    <font color="white"><strong>Wescap</strong></font>
                 </a>
 
                 <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
+                    <div class="nav navbar-nav navbar-right">
                         <a class="nav-item nav-link" href="{{ url_for('about') }}">Tentang</a>
-                    </div>
-                    <div class="navbar-nav">
                         <a class="nav-item nav-link" href="{{ url_for('keluar') }}">Keluar</a>
                     </div>
                 </div>
+
+<!--                <div class="collapse navbar-collapse" id="navbarToggle">-->
+<!--                    <ul class="nav navbar-nav navbar-right">-->
+<!--                        <li><a href="/how-to-use">HOW TO USE</a></li>-->
+<!--                        <li><a href="/about">ABOUT</a></li>-->
+<!--                    </ul>-->
+<!--                </div>-->
+
+
+
             </div>
         </nav>
     </header>
