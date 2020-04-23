@@ -13,16 +13,17 @@ def sukses_req(email):
                                   'ACCOUNTANS', 'BARS', 'BAKERIES', 'HOSPITALS', 'HOTELS', 'PIZZAS', 'PlUMBERS','SCHOOLS', 'SHOPS',
                                   'accountans', 'bars', 'bakeries', 'hospitals', 'hotels', 'pizzas', 'plumbers','schools', 'shops'
                                   ]
+            daftar_term_tanpa_s = ['Accountan', 'Bar', 'Hospital', 'Hotel', 'Pizza', 'Plumber', 'School', 'Shop',
+                                   'ACCOUNTAN', 'BAR', 'HOSPITAL', 'HOTEL', 'PIZZA', 'PlUMBER', 'SCHOOL', 'SHOP',
+                                   'accountan', 'bars', 'hospital', 'hotel', 'pizza', 'plumber', 'school', 'shop'
+                                   ]
             daftar_lokasi=['Uk','London','Birmingham','Liverpool',
                             'UK', 'LONDON', 'BIRMINGHAM', 'LIVERPOOL'
                             'uk', 'london', 'Birmingham', 'Liverpool'
                             ]
-            daftar_term_tanpa_s = ['Accountan', 'Bar', 'Hospital', 'Hotel', 'Pizza', 'Plumber', 'School', 'Shop',
-                                   'ACCOUNTAN', 'BAR', 'HOSPITAL', 'HOTEL', 'PIZZA', 'PlUMBER', 'SCHOOL','SHOP',
-                                   'accountan', 'bars', 'hospital', 'hotel', 'pizza', 'plumber','school', 'shop'
-                                   ]
+
             bakeries = ['bakery', 'Bakery', 'BAKERY']
-            if term in bakeries:
+            if term in bakeries and lokasi in daftar_lokasi:
                 term = term[:5]
                 term = f'{term}IES'.lower()
                 session['term'.lower()] = term
@@ -30,7 +31,7 @@ def sukses_req(email):
                 token = app.config["SECRET_KEY"]
                 return redirect(url_for('hasil', email=email, token=token, term=term, lokasi=lokasi))
 
-            elif term in daftar_term and lokasi in daftar_lokasi:
+            elif term in daftar_term :
                 session['term'.lower()] = term
                 session['lokasi'.lower()] = lokasi
                 token= app.config["SECRET_KEY"]
