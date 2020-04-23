@@ -46,7 +46,7 @@ def sukses_req(email):
                 flash('Isi dong, jangan ada yang kosong', 'danger')
                 return render_template("sukses.html")
             else:
-                flash(f'Hasil untuk {term} di {lokasi} tidak ditemukan. Harap isi yang sesuai. Ingat! isi dengan huruf kecil', 'danger')
+                flash(f'Hasil untuk {term} di {lokasi} tidak ditemukan. Harap isi yang sesuai', 'danger')
                 return render_template("sukses.html")
         return render_template("sukses.html", email=email)
     else:
