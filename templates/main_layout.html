@@ -11,36 +11,31 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css">
 
+
 </head>
 
 <body>
+
     <header class="site-header">
+        <div class="container">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+            <a class="navbar-brand mr-4" href="/">
+                <font color="white"><strong>Wescap</strong></font>
+            </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
-            <div class="container">
-                <a class="navbar-brand mr-4" href="/">
-                    <font color="white"><strong>Wescap</strong></font>
-                </a>
-
-                <div class="collapse navbar-collapse" id="navbarToggle">
-                    <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link" href="{{ url_for('about') }}">Tentang</a>
+                    <div class="collapse navbar-collapse" id="navbarToggle">
+                        <div class="navbar-nav mr-auto">
+                            <a class="nav-item nav-link" href="{{ url_for('about') }}">Tentang</a>
+                            <a class="nav-item nav-link" href="{{ url_for('keluar') }}">Keluar</a>
+                        </div>
                     </div>
-                    <div class="navbar-nav">
-                        <a class="nav-item nav-link" href="{{ url_for('keluar') }}">Keluar</a>
-                    </div>
-                </div>
 
-                <div class="collapse navbar-collapse" id="myNavbar">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li><a href="/how-to-use">HOW TO USE</a></li>
-                        <li><a href="/about">ABOUT</a></li>
-                    </ul>
-                </div>
-
-
-            </div>
         </nav>
+        </div>
+
     </header>
 
     <main role="main" class="container-fluid">
