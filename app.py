@@ -7,6 +7,7 @@ app.config["SECRET_KEY"] = "IN1 Ad4LaH ToKEN y4n6 s4ya Bu4T $EnDir1"
 def sukses_req(email):
     if "email" in session:
         if request.method == "POST":
+
             term = request.form['term']
             lokasi = request.form['lokasi']
             daftar_term =['Accountans','Bars','Bakeries','Hospitals','Hotels','Pizzas','Plumbers','Schools','Shops',
