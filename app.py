@@ -66,6 +66,11 @@ def index():
             session['password'] = password
             flash('Selamat, Anda berhasil masuk!', 'success')
             return redirect(url_for('sukses_req', email=email))
+        elif email == 'Admin@wescap.com' and password == 'pass':
+            session['email'] = email
+            session['password'] = password
+            flash('Selamat, Anda berhasil masuk!', 'success')
+            return redirect(url_for('sukses_req', email=email))
         else:
             flash('Gagal Bos. Email atau password salah! ISI YANG BENER BOSKU!!!', 'danger')
             return redirect(url_for('index'))
